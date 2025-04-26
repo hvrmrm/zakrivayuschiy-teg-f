@@ -20,7 +20,7 @@
   background-attachment: fixed;
   background-color: var(--background-color, #fff);
   font-family: var(--main-font, sans-serif);
-  font-variation-settings: 'wght' var(--font-weight-subtitle, 400);
+  font-variation-settings: "wght" var(--font-weight-subtitle, 400);
   font-size: 18px;
   color: var(--font-color, #000);
   margin-block-start: 100px;
@@ -41,7 +41,7 @@
 
 @media (width <= 375px) {
   .header {
-    padding: 120px 0;;
+    padding: 120px 0;
   }
 }
 
@@ -120,13 +120,16 @@
   }
 }
 
-@supports((text-stroke: 1px var(--font-accent-color, #fff)) or (-webkit-text-stroke: 1px var(--font-accent-color, #fff))) {
+@supports (
+  (text-stroke: 1px var(--font-accent-color, #fff)) or
+    (-webkit-text-stroke: 1px var(--font-accent-color, #fff))
+) {
   .label {
-      -webkit-text-stroke: 1px var(--font-accent-color, #fff);
-      text-stroke: 1px var(--font-accent-color, #fff);
-      text-shadow: none;
+    -webkit-text-stroke: 1px var(--font-accent-color, #fff);
+    text-stroke: 1px var(--font-accent-color, #fff);
+    text-shadow: none;
   }
-} 
+}
 
 .card_type {
   display: block;
@@ -215,7 +218,7 @@
 }
 
 .button__text {
-  position:relative;
+  position: relative;
   z-index: 10;
   color: var(--font-accent-color, #fff);
   font-family: var(--accent-font, fantasy);
@@ -264,7 +267,6 @@
 }
 
 /*Пoдвал*/
-
 
 .button_footer {
   display: flex;
@@ -317,7 +319,7 @@
 dialog::backdrop {
   background-color: #000;
   opacity: 75%;
-} 
+}
 
 .dialog-floppy {
   width: 80px;
@@ -354,14 +356,13 @@ dialog::backdrop {
   margin-block-start: 30px;
 }
 
-
 /*Фильтры*/
 .grayscale {
   filter: grayscale(0.7);
 }
 
 .saturate {
-  filter: saturate(350%)
+  filter: saturate(350%);
 }
 
 .blur {
@@ -377,9 +378,9 @@ dialog::backdrop {
 }
 
 .sepia {
-filter: sepia(80%) contrast(20%);
+  filter: sepia(80%) contrast(20%);
 }
 
 .brightness {
-  filter: brightness(40%)
+  filter: brightness(40%);
 }
