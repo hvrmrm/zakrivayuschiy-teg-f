@@ -34,9 +34,9 @@
   font-family: var(--accent-font, fantasy);
   padding: 127px 0;
   margin-inline: auto;
-  border: 2px solid #000;
+  border: 2px solid var(--font-color, #000);
   gap: 20px;
-  background-color: var(--bg-color, #fff);
+  background-color: var(--background-color, #fff);
 }
 
 @media (width <= 375px) {
@@ -64,7 +64,7 @@
 /*Карточки*/
 
 .card {
-  inline-size: 696px;
+  max-inline-size: 696px;
   display: grid;
   gap: 50px;
   margin-inline: auto;
@@ -75,7 +75,7 @@
   font-family: var(--main-font, sans-serif);
   display: grid;
   gap: 1px;
-  border: 2px solid #000;
+  border: 2px solid var(--font-color, #000);
 }
 
 @media (width <=375px) {
@@ -87,15 +87,15 @@
 .section_title {
   font-size: 18px;
   padding: 6px 10px;
-  font-weight: var(--font-weight-title, 700);
+  font-variation-settings: "wght" var(--font-weight-title, 700);
 }
 
 .card_img {
   position: relative;
   inline-size: 100%;
   block-size: 100%;
-  border-block-start: 2px solid #000;
-  border-block-end: 2px solid #000;
+  border-block-start: 2px solid var(--font-color, #000);
+  border-block-end: 2px solid var(--font-color, #000);
   aspect-ratio: 1/1;
   margin-inline: auto;
 }
@@ -149,6 +149,18 @@
   font-weight: var(--font-weight-subtitle);
 }
 
+.floppy {
+  position: relative;
+  z-index: 1;
+  color: var(--background-color, #fff);
+  inline-size: var(--floppy-size, 28px);
+  block-size: var(--floppy-size, 28px);
+  mix-blend-mode: difference;
+}
+
+.floppy-save {
+  width: 70px;
+}
 /*Кнопки*/
 
 .card_button {
@@ -178,8 +190,8 @@
 }
 
 .card__like-button {
-  background-color: var(--bg-color, #fff);
-  border: 2px solid #000;
+  background-color: var(--background-color, #fff);
+  border: 2px solid var(--font-color, #000);
   width: 130px;
   height: 38px;
 }
@@ -187,7 +199,7 @@
 .button {
   position: relative;
   background-color: var(--background-color, #fff);
-  border: 2px solid #000;
+  border: 2px solid var(--font-color, #000);
   font-size: 14px;
   text-align: center;
   text-transform: inherit;
@@ -200,10 +212,10 @@
 }
 
 .button:focus-visible {
-  box-shadow: 2px 2px 0 #000;
+  box-shadow: 2px 2px 0 var(--font-color, #000);
 }
 
-.button:after {
+.button::after {
   position: absolute;
   content: "";
   background-color: var(--background-accent-color, #000);
@@ -213,7 +225,7 @@
   transform-origin: left;
 }
 
-.button:hover:after {
+.button:hover::after {
   transform: scaleX(1);
 }
 
@@ -256,7 +268,7 @@
   z-index: 1;
   block-size: 21px;
   inline-size: 21px;
-  color: #fff;
+  color: var(--font-accent-color, #fff);
   mix-blend-mode: difference;
 }
 
@@ -274,16 +286,6 @@
   align-items: center;
 }
 
-.save-button {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  padding: 15px 21px;
-  margin-block-end: 103px;
-}
-
 @media (width <=375px) {
   .save-button {
     flex-direction: column;
@@ -296,7 +298,7 @@
   width: 21px;
   position: relative;
   mix-blend-mode: difference;
-  color: #fff;
+  color: var(--font-accent-color, #fff);
   z-index: 2;
 }
 
@@ -309,7 +311,7 @@
 .dialog {
   max-inline-size: 355px;
   padding: 25px 30px;
-  border: 2px solid #000;
+  border: 2px solid var(--font-color, #fff);
 }
 
 .dialog [open] {
@@ -317,12 +319,8 @@
 }
 
 dialog::backdrop {
-  background-color: #000;
+  background-color: var(--font-color, #000);
   opacity: 75%;
-}
-
-.dialog-floppy {
-  width: 80px;
 }
 
 .button__floppy {
@@ -350,8 +348,8 @@ dialog::backdrop {
 .dialog__button {
   inline-size: 100%;
   padding: 12px 0;
-  background-color: var(--bg-color, #fff);
-  border: 2px solid #000;
+  background-color: var(--background-color, #fff);
+  border: 2px solid var(--font-color, #000);
   text-transform: uppercase;
   margin-block-start: 30px;
 }

@@ -16,8 +16,9 @@
       transparent 4px
     ),
     linear-gradient(180deg, #e7e7e7 0.01%, #1a1a1a 100%);
+
   --background-accent-color: #000;
-  --main-font: "Inter";
+  --main-font: "Inter-Variable";
   --accent-font: "Press Start 2P";
   --font-color: #000;
   --font-accent-color: #fff;
@@ -26,5 +27,13 @@
   --contour-color: #000;
   --contour-like-color: #ff0000;
   --heart-color: #000;
-  --like-heart-color: #ff0000;
+  --heart-like-color: #ff0000;
+  --floppy-size: 21px;
+}
+
+@media (width <= 375px) {
+  :root {
+    --floppy-size: 28px;
+    --modal-padding-inline: 40px;
+  }
 }

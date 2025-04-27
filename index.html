@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
-    <link rel="icon" href="./svg/favicon (2).svg" type="image/svg+xml" />
+    <link rel="icon" href="./images/favicon.ico" sizes="any" />
+    <link rel="icon" href="./svg/favicon(2).svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./images/favicon.ico" />
   </head>
   <body class="page">
     <header class="header header_type">
@@ -83,8 +85,9 @@
           <span class="label">&lt;/HTML&gt;</span>
           <img
             class="card_type grayscale"
-            src="./images/Йода читает.jpg"
+            src="./images/чтнение.jpg"
             alt="корги с книгой"
+            loading="lazy"
           />
         </div>
         <div class="card_text">
@@ -145,8 +148,9 @@
           <span class="label">&lt;desigions&gt;</span>
           <img
             class="card_type brightness"
-            src="./images/Йода ждет.jpg"
+            src="./images/терпение.jpg"
             alt="Корги Йода ждет за дверью"
+            loading="lazy"
           />
         </div>
         <div class="card_text">
@@ -205,8 +209,9 @@
           <span class="label">&lt;CSS&gt;</span>
           <img
             class="card_type saturate"
-            src="./images/Йода в шоке.jpg"
+            src="./images/шок.jpg"
             alt="корги Йода лежит на полу"
+            loading="lazy"
           />
         </div>
         <div class="card_text">
@@ -266,6 +271,7 @@
             class="card_type invert"
             src="./images/Окружение.jpg"
             alt="девушка с корги Йодой"
+            loading="lazy"
           />
         </div>
         <div class="card_text">
@@ -326,6 +332,7 @@
             class="card_type sepia"
             src="./images/Корги.jpg"
             alt="4 собаки изучают что происходит за забором"
+            loading="lazy"
           />
         </div>
         <div class="card_text">
@@ -384,8 +391,9 @@
           <span class="label">&lt;lifes-style: none;&gt;</span>
           <img
             class="card_type blur"
-            src="./images/Йода грустит.jpg"
-            alt="расстроеный корги Йода лежит на полу"
+            src="./images/грусть.jpg"
+            alt="расстроеныйкоргиЙодалежитнаполу"
+            loading="lazy"
           />
         </div>
         <div class="card_text">
@@ -448,6 +456,7 @@
             class="card_type hue-rotate"
             src="./images/размышление.jpg"
             alt="задумчивый рыбак"
+            loading="lazy"
           />
         </div>
         <div class="card_text">
@@ -495,7 +504,7 @@
               />
             </svg>
           </button>
-          <button class="card__like-button button">
+          <button class="card__like-button button" type="button">
             <span class="button__text">Like</span>
           </button>
         </div>
@@ -507,22 +516,26 @@
           onclick="window['dialog'].showModal()"
           aria-controls="dialog"
         >
-          <img
-            class="dialog__floppy"
-            src="./svg/floppy.svg"
-            alt="Иконка дискеты"
-          />
+          <svg
+            class="floppy"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 21 21"
+          >
+            <use href="./svg/floppy.svg#floppy"></use>
+          </svg>
           <span class="button__text">Сохранить на&nbsp;память</span>
         </button>
       </div>
     </main>
     <dialog class="dialog" id="dialog">
       <div class="dialog__content">
-        <img
-          class="dialog__floppy"
-          src="./svg/floppy.svg"
-          alt="Иконка дискеты"
-        />
+        <svg
+          class="floppy-save"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 39 39"
+        >
+          <use href="./svg/floppy.svg#floppy"></use>
+        </svg>
         <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
       </div>
       <button
