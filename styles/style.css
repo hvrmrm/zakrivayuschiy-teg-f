@@ -186,7 +186,7 @@
 }
 
 .card__icon-button:focus-visible {
-  border: 2px solid #000;
+  border: 2px solid var(--font-color, #000);
 }
 
 .card__like-button {
